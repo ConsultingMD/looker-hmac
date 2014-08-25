@@ -11,6 +11,7 @@ module Grnds
       class SignedUrlGenerator
 
         def initialize(config)
+          ENV['LOOKER_EMBED_SECRET'] || raise('no LOOKER_EMBED_SECRET provided')
           @config = config
         end
 
@@ -46,7 +47,7 @@ module Grnds
 
           signature = Base64.encode64(
               OpenSSL::HMAC.digest(
-                  OpenSSL::Digest::Digest.new('sha1'),
+                  OpenSSL::Digest.new('sha1'),
                   secret,
                   string_to_sign.force_encoding('utf-8'))).strip
 
