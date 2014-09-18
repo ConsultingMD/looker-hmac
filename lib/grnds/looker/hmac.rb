@@ -24,7 +24,7 @@ module Grnds
           json_last_name = @config[:last_name].to_json
           json_permissions = @config[:permissions].to_json
           json_models = @config[:models].to_json
-          json_access_filters = {}.to_json
+          json_access_filters = @config[:filters].to_json
 
           path = @config[:path_root] + CGI.escape(@config[:embed_path])
 
