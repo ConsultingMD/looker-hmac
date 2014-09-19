@@ -6,9 +6,9 @@ require 'grnds/looker/hmac/version'
 Gem::Specification.new do |spec|
   spec.name          = "grnds-looker-hmac"
   spec.version       = Grnds::Looker::Hmac::VERSION
-  spec.authors       = ["Bradley Johnson"]
-  spec.email         = ["brad@grio.com"]
-  spec.date          = %q{2014-08-22}
+  spec.authors       = ["Bradley Johnson", "Kenneth Berland"]
+  spec.email         = ["brad@grio.com", "ken@grnds.com"]
+  spec.date          = %q{2014-09-18}
   spec.summary       = %q{Generates looker signed urls}
   spec.homepage      = ""
   spec.license       = "MIT"
