@@ -28,7 +28,8 @@ Or install it yourself as:
       :first_name => 'Kenneth',
       :last_name => 'Berland',
       :permissions => ["see_dashboards", "see_looks", "access_data"],
-      :models => ['uat']
+      :models => ['uat'],
+      :session_length => 1.day.to_i,
     }
 
     signer = Grnds::Looker::Hmac::SignedUrlGenerator.new(config)

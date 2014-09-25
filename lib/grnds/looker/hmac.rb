@@ -28,7 +28,7 @@ module Grnds
 
           path = @config[:path_root] + CGI.escape(@config[:embed_path])
 
-          json_session_length = 60.to_json
+          json_session_length = (@config[:session_length] || 86400).to_json
           json_force_logout_login = true.to_json
 
           json_current_time = Time.now.to_i.to_json
