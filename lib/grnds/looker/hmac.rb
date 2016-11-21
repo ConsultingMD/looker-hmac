@@ -71,6 +71,7 @@ module Grnds
           end
 
           query_string = query_items.join('&')
+          binding.pry
           "https://" + @config[:host] + path + '?' + query_string + "\n"
         end
       end
