@@ -19,6 +19,8 @@ module Grnds
 
           secret = ENV['LOOKER_EMBED_SECRET']
 
+          logger.debug("secret #{secret}")
+          logger.debug("config #{@config}")
           json_external_user_id = @config[:external_user_id].to_json
           json_first_name = @config[:first_name].to_json
           json_last_name = @config[:last_name].to_json
@@ -71,7 +73,8 @@ module Grnds
           end
 
           query_string = query_items.join('&')
-          binding.pry
+          logger.debug("query_string #{query_string}")
+          logger.debug("query https://#{@config[:host]}#{path}?#{query_string}")
           "https://" + @config[:host] + path + '?' + query_string + "\n"
         end
       end
