@@ -25,6 +25,7 @@ module Grnds
           json_permissions = @config[:permissions].to_json
           json_models = @config[:models].to_json
           json_access_filters = @config[:filters].to_json
+          json_user_attributes = @config[:user_attributes].to_json
 
           path = @config[:path_root] + CGI.escape(@config[:embed_path])
 
@@ -43,7 +44,8 @@ module Grnds
           string_to_sign += json_external_user_id + "\n"
           string_to_sign += json_permissions + "\n"
           string_to_sign += json_models + "\n"
-          string_to_sign += json_access_filters
+          string_to_sign += json_access_filters + "\n"
+          string_to_sign += json_user_attributes
 
           signature = Base64.encode64(
               OpenSSL::HMAC.digest(
@@ -59,6 +61,7 @@ module Grnds
               permissions: json_permissions,
               models: json_models,
               access_filters: json_access_filters,
+              user_attributes: json_user_attributes,
               first_name: json_first_name,
               last_name: json_last_name,
               force_logout_login: json_force_logout_login,
