@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "grnds-looker-hmac"
   spec.description   = "A simplified URL builder for embedded looker integrations"
   spec.version       = Grnds::Looker::Hmac::VERSION
-  spec.authors       = ["Bradley Johnson", "Kenneth Berland"]
-  spec.email         = ["brad@grio.com", "ken@grnds.com"]
-  spec.date          = %q{2014-09-18}
+  spec.authors       = ["Bradley Johnson", "Kenneth Berland", "Anuja Juvekar", "Rick Cobb"]
+  spec.email         = ["brad@grio.com", "rick@grnds.com", "anuja.juvekar@grnds.com"]
+  spec.date          = %q{2018-10-10}
   spec.summary       = %q{Generates looker signed urls}
   spec.homepage      = "https://github.com/ConsultingMD/grnds-looker-hmac"
   spec.license       = "MIT"

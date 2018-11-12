@@ -44,8 +44,8 @@ module Grnds
           string_to_sign += json_external_user_id + "\n"
           string_to_sign += json_permissions + "\n"
           string_to_sign += json_models + "\n"
-          string_to_sign += json_access_filters + "\n"
-          string_to_sign += json_user_attributes
+          string_to_sign += json_user_attributes + "\n"
+          string_to_sign += json_access_filters
 
           signature = Base64.encode64(
               OpenSSL::HMAC.digest(
